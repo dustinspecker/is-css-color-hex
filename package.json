@@ -1,6 +1,6 @@
 {
   "name": "is-css-color-hex",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Determine if a string is a valid CSS color hex",
   "main": "lib/index.js",
   "scripts": {
