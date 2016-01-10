@@ -36,16 +36,16 @@ test('should return false for string not prefixed with hash', t => {
   t.notOk(isCSSColorHex('000'))
   t.notOk(isCSSColorHex('AAAAAA'))
   t.notOk(isCSSColorHex('aaaaaa'))
+  t.notOk(isCSSColorHex('000F'))
+  t.notOk(isCSSColorHex('aaaaaaff'))
 })
 
-test('should return false for hexes with other than 3 or 6 hex characters', t => {
+test('should return false for hexes with other than 3, 4, 6, or 8 hex characters', t => {
   t.notOk(isCSSColorHex('#1'))
   t.notOk(isCSSColorHex('#a'))
   t.notOk(isCSSColorHex('#A'))
   t.notOk(isCSSColorHex('#12'))
   t.notOk(isCSSColorHex('#Ab'))
-  t.notOk(isCSSColorHex('#1234'))
-  t.notOk(isCSSColorHex('#AbCd'))
   t.notOk(isCSSColorHex('#12345'))
   t.notOk(isCSSColorHex('#AbCdE'))
   t.notOk(isCSSColorHex('#1234567'))
@@ -58,14 +58,18 @@ test('should return false for invalid hex characters', t => {
   t.notOk(isCSSColorHex('#XYZXYZ'))
   t.notOk(isCSSColorHex('#xyz'))
   t.notOk(isCSSColorHex('#!!!???'))
+  t.notOk(isCSSColorHex('#000x'))
+  t.notOk(isCSSColorHex('#000000xx'))
 })
 
 test('should true for valid color hexes', t => {
   t.ok(isCSSColorHex('#000'))
   t.ok(isCSSColorHex('#AAA'))
   t.ok(isCSSColorHex('#aaa'))
+  t.ok(isCSSColorHex('#aaaa'))
   t.ok(isCSSColorHex('#000000'))
   t.ok(isCSSColorHex('#FF99CC'))
   t.ok(isCSSColorHex('#ff99cc'))
   t.ok(isCSSColorHex('#ff99CC'))
+  t.ok(isCSSColorHex('#ff99CCaa'))
 })

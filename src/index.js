@@ -11,5 +11,5 @@ module.exports = value => {
     throw new Error('Expected value to be a String')
   }
 
-  return (/^#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?$/).test(value)
+  return (/^#([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/).test(value)
 }

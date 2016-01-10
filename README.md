@@ -21,13 +21,25 @@ isCSSColorHex(1);
 isCSSColorHex('0aC');
 // => false
 
+//isCSSColorHex('0aCf');
+// => false
+
 isCSSColorHex('01AbCd');
+// => false
+
+isCSSColorHex('01AbCdff');
 // => false
 
 isCSSColorHex('#0aC');
 // => true
 
+isCSSColorHex('#0aCf');
+// => true
+
 isCSSColorHex('#01AbCd');
+// => true
+
+isCSSColorHex('#01AbCdfF');
 // => true
 ```
 
@@ -41,13 +53,25 @@ isCSSColorHex(1);
 isCSSColorHex('0aC');
 // => false
 
+//isCSSColorHex('0aCf');
+// => false
+
 isCSSColorHex('01AbCd');
+// => false
+
+isCSSColorHex('01AbCdff');
 // => false
 
 isCSSColorHex('#0aC');
 // => true
 
+isCSSColorHex('#0aCf');
+// => true
+
 isCSSColorHex('#01AbCd');
+// => true
+
+isCSSColorHex('#01AbCdfF');
 // => true
 ```
 
