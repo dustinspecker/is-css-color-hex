@@ -21,7 +21,7 @@ isCSSColorHex(1);
 isCSSColorHex('0aC');
 // => false
 
-//isCSSColorHex('0aCf');
+isCSSColorHex('0aCf');
 // => false
 
 isCSSColorHex('01AbCd');
@@ -53,7 +53,7 @@ isCSSColorHex(1);
 isCSSColorHex('0aC');
 // => false
 
-//isCSSColorHex('0aCf');
+isCSSColorHex('0aCf');
 // => false
 
 isCSSColorHex('01AbCd');
