@@ -6,7 +6,7 @@
  * @throws {Error} - if value is not a String
  * @return {Boolean} - is string a valid CSS color hex?
  */
-module.exports = function (value) {
+module.exports = value => {
   if (typeof value !== 'string') {
     throw new Error('Expected value to be a String')
   }
