@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /**
  * Determine if a value is a valid CSS color hex
@@ -8,8 +8,8 @@
  */
 module.exports = function (value) {
   if (typeof value !== 'string') {
-    throw new Error('Expected value to be a String');
+    throw new Error('Expected value to be a String')
   }
 
-  return (/^#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?$/).test(value);
-};
+  return (/^#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?$/).test(value)
+}
