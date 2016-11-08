@@ -37,6 +37,12 @@
     "gulp-babel": "^6.0.0",
     "gulp-eslint": "^3.0.1",
     "gulp-istanbul": "^1.0.0",
-    "nyc": "^7.1.0"
+    "nyc": "^8.4.0"
+  },
+  "nyc": {
+    "exclude": [
+      "node_modules",
+      "test"
+    ]
   }
 }
